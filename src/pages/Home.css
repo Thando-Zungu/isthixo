@@ -1,0 +1,82 @@
+.home {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/public/assets/key.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+.hero, .featured, .about {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+  padding: 40px 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+}
+
+.featured {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.product-preview {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.preview-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.preview-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.about {
+  padding: 60px 20px;
+  background: black;
+  text-align: center;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border: none;
+}

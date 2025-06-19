@@ -1,0 +1,11 @@
+.product-detail {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.product-detail textarea {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1em;
+}
