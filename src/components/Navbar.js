@@ -1,36 +1,41 @@
-import { useContext } from 'react';
-import { AuthContext } from '../contexts/AuthContext';
-import { auth } from '../firebase';
-import { signOut } from 'firebase/auth';
+// src/components/Navbar.js
+import React from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar({ cartCount }) {
-  const { currentUser } = useContext(AuthContext);
-
   return (
-    <nav className="navbar">
-      <h2>Isthixo</h2>
-      <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/shop">Shop</Link></li>
-        <li><Link to="/cart">Cart ({cartCount})</Link></li>
+    <header className="navbar">
+      {/* Desktop Nav */}
+      <nav className="nav-desktop">
+        <div className="logo">
+          <Link to="/">Isthixo</Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">Cart ({cartCount})</Link>
+          <Link to="/login">Login</Link>
+        </div>
+      </nav>
 
-        {!currentUser ? (
-          <>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-          </>
-        ) : (
-          <>
-            <li>Hello, {currentUser.email.split('@')[0]}</li>
-            <li><button onClick={() => signOut(auth)}>Logout</button></li>
-          </>
-        )}
-      </ul>
-    </nav>
+      {/* Mobile Nav */}
+      <nav className="nav-mobile">
+        <div className="mobile-header">
+          <Link to="/" className="logo">Isthixo</Link>
+          <input type="checkbox" id="menu-toggle" />
+          <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
+        </div>
+        <div className="mobile-menu">
+          <Link to="/">Home</Link>
+          <Link to="/shop">Shop</Link>
+          <Link to="/cart">Cart ({cartCount})</Link>
+          <Link to="/login">Login</Link>
+        </div>
+      </nav>
+    </header>
   );
 }
 
 export default Navbar;
-
 

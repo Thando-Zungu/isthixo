@@ -1,10 +1,9 @@
-/* ===== Global Reset ===== */
-body, h1, h2, h3, p, ul {
+/* Reset & Base */
+body, h1, h2, h3, p, ul, li, input, textarea, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
 }
 
 a {
@@ -12,39 +11,45 @@ a {
   color: inherit;
 }
 
-button {
-  cursor: pointer;
-  font-size: 1rem;
-}
-
 img {
   max-width: 100%;
   display: block;
 }
 
-/* ===== Navbar ===== */
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* === Navbar === */
 .navbar {
-  background-color: #000;
-  color: #fff;
-  padding: 16px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 24px;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.navbar .brand {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navbar .links {
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
-.navbar a {
+.navbar .links a {
   color: #fff;
   font-weight: 500;
 }
 
-/* ===== Shop Page ===== */
+/* === Shop Page === */
 .shop {
   padding: 20px;
   max-width: 1200px;
@@ -54,7 +59,7 @@ img {
 .shop h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .search-container {
@@ -66,9 +71,9 @@ img {
 .search-container input {
   width: 100%;
   max-width: 400px;
-  padding: 12px;
+  padding: 10px;
   font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid #ccc;
 }
 
@@ -85,33 +90,37 @@ img {
   border: none;
   background-color: #000;
   color: #fff;
-  border-radius: 5px;
 }
 
 .category-buttons .active {
   background-color: #444;
 }
 
+/* === Product Grid === */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
-/* ===== ProductCard ===== */
 .product-card {
   background: #fff;
+  border-radius: 8px;
   padding: 16px;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
   height: 180px;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .product-card button {
@@ -119,28 +128,58 @@ img {
   padding: 10px 16px;
   background-color: #000;
   color: #fff;
-  border: none;
   width: 100%;
-  border-radius: 5px;
+  border: none;
 }
 
-/* ===== Product Detail ===== */
+/* === Product Detail === */
 .product-detail {
-  padding: 20px;
   max-width: 600px;
   margin: auto;
+  padding: 20px;
 }
 
 .product-detail h2 {
   margin-top: 16px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
-/* ===== Cart & Forms ===== */
-.cart, .checkout, .login, .register, .confirmation {
+.product-detail button {
+  margin-top: 10px;
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
+
+/* === Forms & Auth === */
+.login, .register, .checkout, .forgot-password, .confirmation {
+  max-width: 400px;
+  margin: auto;
   padding: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  width: 100%;
+  border: none;
+}
+
+/* === Cart === */
+.cart {
   max-width: 600px;
   margin: auto;
+  padding: 20px;
 }
 
 .cart ul {
@@ -148,53 +187,32 @@ img {
   padding-left: 0;
 }
 
-.cart button, .checkout button, .login button, .register button {
-  padding: 10px 16px;
-  width: 100%;
-  margin-top: 10px;
+.cart button {
+  padding: 8px 16px;
   background-color: #000;
-  color: white;
+  color: #fff;
   border: none;
-  border-radius: 5px;
 }
 
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* ===== Mobile Specific ===== */
+/* === Mobile Tweaks === */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
   }
 
   .navbar .links {
     flex-direction: column;
-    gap: 8px;
-  }
-
-  .shop h2 {
-    font-size: 1.4rem;
-  }
-
-  .search-container input {
-    font-size: 0.95rem;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
   }
 
   .product-grid {
     grid-template-columns: 1fr;
   }
 
-  .product-card img {
-    height: auto;
+  .search-container input {
+    width: 90%;
   }
 }
-
-
