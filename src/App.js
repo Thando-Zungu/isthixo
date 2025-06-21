@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Checkout from './pages/Checkout';
 import Login from './pages/login';
 import Register from './pages/Register';
@@ -38,7 +38,7 @@ useEffect(() => {
   }, [cart]);
 
   return (
-    <Router>
+    <BrowserRouter basename="/isthixo">
       <Navbar cartCount={cart.length} />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -65,7 +65,7 @@ useEffect(() => {
 <Route path="/forgot-password" element={<ForgotPassword />} />
 
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
