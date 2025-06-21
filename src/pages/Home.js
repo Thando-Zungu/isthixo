@@ -15,7 +15,7 @@ function Home() {
       <section className="featured">
         <h2>Featured Styles</h2>
         <div className="product-preview">
-          {products.slice(0, 4).map(product => (
+          {products.slice(0, 3).map(product => (
             <div key={product.id} className="preview-card">
               <img src={product.image} alt={product.name} />
               <h3>{product.name}</h3>

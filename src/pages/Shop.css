@@ -67,3 +67,40 @@
 .add-to-cart-btn:hover {
   background-color: #222;
 }
+.category-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-buttons button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-buttons button:hover {
+  background-color: #333;
+}
+
+.category-buttons .active {
+  background-color: #444;
+}
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}

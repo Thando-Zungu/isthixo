@@ -13,9 +13,6 @@ import './App.css';
 import Confirmation from './pages/Confirmation';
 import ForgotPassword from './pages/ForgotPassword';
 
-
-
-
 const getStoredCart = () => {
   const stored = localStorage.getItem('istCart');
   return stored ? JSON.parse(stored) : [];
@@ -35,7 +32,7 @@ useEffect(() => {
     setCart(prev => [...prev, product]);
   };
 
-  // Save to localStorage on every cart update
+ 
   useEffect(() => {
     localStorage.setItem('istCart', JSON.stringify(cart));
   }, [cart]);
