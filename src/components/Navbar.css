@@ -1,11 +1,10 @@
-/* src/components/Navbar.css */
-
 .navbar {
   background-color: #000;
   color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-/* -------- Desktop Navbar -------- */
+/* Desktop Navbar */
 .nav-desktop {
   display: flex;
   justify-content: space-between;
@@ -13,54 +12,49 @@
   padding: 15px 30px;
 }
 
-.nav-desktop .nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #fff;
-}
-
 .nav-desktop .logo a {
+  color: white;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  text-decoration: none;
 }
 
-/* -------- Mobile Navbar -------- */
+.nav-desktop .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* Mobile Navbar */
 .nav-mobile {
   display: none;
   flex-direction: column;
   background-color: #000;
-  padding: 10px;
+  padding: 10px 15px;
 }
 
-.nav-mobile .mobile-header {
+.mobile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-mobile .logo {
-  font-size: 1.3rem;
-  color: #fff;
+.mobile-header .logo {
+  font-size: 1.5rem;
+  color: white;
   text-decoration: none;
 }
 
-.menu-icon {
+.menu-button {
   font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
   cursor: pointer;
-  color: #fff;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-#menu-toggle:checked ~ .mobile-menu {
-  display: flex;
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
@@ -69,12 +63,12 @@
 .mobile-menu a {
   color: white;
   text-decoration: none;
-  padding: 10px;
   background-color: #111;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-/* -------- Responsive Rules -------- */
+/* Responsive Rules */
 @media (max-width: 768px) {
   .nav-desktop {
     display: none;
@@ -84,10 +78,3 @@
     display: flex;
   }
 }
-
-@media (min-width: 769px) {
-  .nav-mobile {
-    display: none;
-  }
-}
-

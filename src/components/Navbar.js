@@ -1,9 +1,13 @@
-// src/components/Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 function Navbar({ cartCount }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="navbar">
       {/* Desktop Nav */}
@@ -22,20 +26,25 @@ function Navbar({ cartCount }) {
       {/* Mobile Nav */}
       <nav className="nav-mobile">
         <div className="mobile-header">
-          <Link to="/" className="logo">Isthixo</Link>
-          <input type="checkbox" id="menu-toggle" />
-          <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
+          <Link to="/" className="logo" onClick={closeMenu}>Isthixo</Link>
+          <button className="menu-button" onClick={toggleMenu}>
+            ☰
+          </button>
         </div>
-        <div className="mobile-menu">
-          <Link to="/">Home</Link>
-          <Link to="/shop">Shop</Link>
-          <Link to="/cart">Cart ({cartCount})</Link>
-          <Link to="/login">Login</Link>
-        </div>
+
+        {isOpen && (
+          <div className="mobile-menu">
+            <Link to="/" onClick={closeMenu}>Home</Link>
+            <Link to="/shop" onClick={closeMenu}>Shop</Link>
+            <Link to="/cart" onClick={closeMenu}>Cart ({cartCount})</Link>
+            <Link to="/login" onClick={closeMenu}>Login</Link>
+          </div>
+        )}
       </nav>
     </header>
   );
 }
 
 export default Navbar;
+
 
