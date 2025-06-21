@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/isthixo/static/css/main.aa1cf6ee.css",
-    "main.js": "/isthixo/static/js/main.b36d2486.js",
+    "main.js": "/isthixo/static/js/main.e52a40a6.js",
     "static/js/453.9a48504a.chunk.js": "/isthixo/static/js/453.9a48504a.chunk.js",
     "static/media/key.jpg": "/isthixo/static/media/key.59c95dc19607b10bf613.jpg",
     "index.html": "/isthixo/index.html",
     "main.aa1cf6ee.css.map": "/isthixo/static/css/main.aa1cf6ee.css.map",
-    "main.b36d2486.js.map": "/isthixo/static/js/main.b36d2486.js.map",
+    "main.e52a40a6.js.map": "/isthixo/static/js/main.e52a40a6.js.map",
     "453.9a48504a.chunk.js.map": "/isthixo/static/js/453.9a48504a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa1cf6ee.css",
-    "static/js/main.b36d2486.js"
+    "static/js/main.e52a40a6.js"
   ]
 }
