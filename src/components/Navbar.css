@@ -31,37 +31,29 @@
   flex-direction: column;
   background-color: #000;
   padding: 10px 15px;
-  margin-right: 90px;
 }
 
 .mobile-header {
-  position: relative;
-  height: 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center; /* Center the content horizontally */
+}
+
+.mobile-header .logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  padding-right: 500px;
 }
 
 .menu-button {
-  position: absolute;
-  left: 10px; /* Push it to the far left */
   font-size: 1.8rem;
   color: white;
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
-
-.mobile-header .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 
 .mobile-menu {
   display: flex;
