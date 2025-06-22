@@ -52,7 +52,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding-right: 10px;
 }
 
 .mobile-menu {
