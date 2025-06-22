@@ -40,7 +40,6 @@ function Navbar({ cartCount }) {
             <Link to="/shop" onClick={closeMenu}>Shop</Link>
             <Link to="/cart" onClick={closeMenu}>Cart ({cartCount})</Link>
             <Link to="/login" onClick={closeMenu}>Login</Link>
-            <Link to="/register" onClick={closeMenu}>Register</Link>
           </div>
         )}
       </nav>

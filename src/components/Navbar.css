@@ -40,6 +40,7 @@
   align-items: center;
   position: relative;
 }
+<<<<<<< HEAD
 
 .mobile-header .logo {
   font-size: 1.5rem;
@@ -49,6 +50,8 @@
 
 }
 
+=======
+>>>>>>> 72a6379428fcbe36755c23ac7836bbfa8f740454
 .menu-button {
   font-size: 1.8rem;
   color: white;
@@ -58,6 +61,11 @@
   position: absolute;
   padding: 0px;
 
+}
+.mobile-header .logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
 }
 
 .mobile-menu {
