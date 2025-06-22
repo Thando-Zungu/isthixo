@@ -37,13 +37,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  height: 50px;
 }
 
 .mobile-header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  padding-right: 500px;
+  font-weight: bold;
+  z-index: 1;
 }
 
 .menu-button {
@@ -52,7 +58,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding-right: 10px;
+  z-index: 2;
 }
 
 .mobile-menu {
@@ -68,6 +74,9 @@
   background-color: #111;
   padding: 10px;
   border-radius: 5px;
+}
+.spacer {
+    width: 32px; /* Matches button size to balance layout */
 }
 
 /* Responsive Rules */
