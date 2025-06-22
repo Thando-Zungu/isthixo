@@ -21,18 +21,17 @@ function Navbar({ cartCount }) {
           <Link to="/cart">Cart ({cartCount})</Link>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
+
         </div>
       </nav>
 
       {/* Mobile Nav */}
       <nav className="nav-mobile">
         <div className="mobile-header">
+          <Link to="/" className="logo" onClick={closeMenu}>Isthixo</Link>
           <button className="menu-button" onClick={toggleMenu}>
             ☰
           </button>
-          <Link to="/" className="logo center-logo" onClick={closeMenu}>
-            Isthixo
-          </Link>
         </div>
 
         {isOpen && (
@@ -50,3 +49,5 @@ function Navbar({ cartCount }) {
 }
 
 export default Navbar;
+
+

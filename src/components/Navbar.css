@@ -37,7 +37,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .mobile-header .logo {
@@ -78,13 +77,4 @@
   .nav-mobile {
     display: flex;
   }
-  .center-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
 }
