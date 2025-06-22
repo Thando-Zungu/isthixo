@@ -38,19 +38,17 @@
   justify-content: space-between;
   align-items: center;
 }
-
-.mobile-header .logo {
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-}
-
 .menu-button {
   font-size: 1.8rem;
   color: white;
   background: none;
   border: none;
   cursor: pointer;
+}
+.mobile-header .logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
 }
 
 .mobile-menu {
