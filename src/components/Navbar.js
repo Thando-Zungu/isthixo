@@ -20,6 +20,8 @@ function Navbar({ cartCount }) {
           <Link to="/shop">Shop</Link>
           <Link to="/cart">Cart ({cartCount})</Link>
           <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+
         </div>
       </nav>
 
