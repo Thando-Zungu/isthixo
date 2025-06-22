@@ -34,21 +34,15 @@
 }
 
 .mobile-header {
-  position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  height: 60px;
 }
 
-/* Center the logo perfectly */
 .mobile-header .logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .menu-button {
@@ -57,10 +51,6 @@
   background: none;
   border: none;
   cursor: pointer;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .mobile-menu {
