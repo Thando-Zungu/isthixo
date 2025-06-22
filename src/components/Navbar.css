@@ -35,38 +35,33 @@
 }
 
 .mobile-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
-}
-<<<<<<< HEAD
-
-.mobile-header .logo {
-  font-size: 1.5rem;
-  color: red;
-  text-decoration: none;
-  position: center;
-
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
 }
 
-=======
->>>>>>> 72a6379428fcbe36755c23ac7836bbfa8f740454
 .menu-button {
+  position: absolute;
+  left: 10px; /* Push it to the far left */
   font-size: 1.8rem;
   color: white;
   background: none;
   border: none;
   cursor: pointer;
-  position: absolute;
-  padding: 0px;
-
 }
+
 .mobile-header .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
+
 
 .mobile-menu {
   display: flex;
