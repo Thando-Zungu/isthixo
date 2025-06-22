@@ -26,23 +26,21 @@ function Navbar({ cartCount }) {
       </nav>
 
       {/* Mobile Nav */}
-<nav className="nav-mobile">
-  <div className="mobile-header">
-    <button className="menu-button" onClick={toggleMenu}>☰</button>
-    <Link to="/" className="logo" onClick={closeMenu}>Isthixo</Link>
-  </div>
+      <nav className="nav-mobile">
+        <div className="mobile-header">
+          <Link to="/" className="logo" onClick={closeMenu}>Isthixo</Link>
+          <button className="menu-button" onClick={toggleMenu}>☰</button>
+        </div>
 
-  {isOpen && (
-    <div className="mobile-menu">
-      <Link to="/" onClick={closeMenu}>Home</Link>
-      <Link to="/shop" onClick={closeMenu}>Shop</Link>
-      <Link to="/cart" onClick={closeMenu}>Cart ({cartCount})</Link>
-      <Link to="/login" onClick={closeMenu}>Login</Link>
-      <Link to="/register" onClick={closeMenu}>Register</Link>
-    </div>
-  )}
-</nav>
-
+        {isOpen && (
+          <div className="mobile-menu">
+            <Link to="/" onClick={closeMenu}>Home</Link>
+            <Link to="/shop" onClick={closeMenu}>Shop</Link>
+            <Link to="/cart" onClick={closeMenu}>Cart ({cartCount})</Link>
+            <Link to="/login" onClick={closeMenu}>Login</Link>
+          </div>
+        )}
+      </nav>
     </header>
   );
 }
