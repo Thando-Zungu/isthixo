@@ -12,6 +12,7 @@ import Cart from './pages/Cart';
 import './App.css';
 import Confirmation from './pages/Confirmation';
 import ForgotPassword from './pages/ForgotPassword';
+import Footer from './components/Footer'; 
 
 const getStoredCart = () => {
   const stored = localStorage.getItem('istCart');
@@ -60,12 +61,15 @@ useEffect(() => {
       </div>
     )
   }
+  
 />
 <Route path="/confirmation" element={<Confirmation />} />
 <Route path="/forgot-password" element={<ForgotPassword />} />
-
+     
       </Routes>
+      <Footer />
     </BrowserRouter>
+    
   );
 }
 
